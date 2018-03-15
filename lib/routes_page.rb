@@ -5,12 +5,9 @@ module RoutesPage
   RAILS_ROUTE_INSPECTOR = ActionDispatch::Routing::RoutesInspector.new([])
 
   def self.format_routes(routes = all_routes)
-    routes_formated = RAILS_ROUTE_INSPECTOR.send :collect_routes, routes
-
-    grape_routes_formated = format_grape_routes(find_grape_routes(routes))
     {
-      rails_routes: routes_formated,
-      grape_routes: grape_routes_formated
+      rails_routes: RAILS_ROUTE_INSPECTOR.send :collect_routes, routes,
+      grape_routes: format_grape_routes(find_grape_routes(routes))
     }
   end
 
@@ -45,9 +42,4 @@ module RoutesPage
     Rails.application.reload_routes!
     Rails.application.routes.routes
   end
-
-  def self.enable_grape_routes!
-    @enable_grape = true
-  end
-
 end

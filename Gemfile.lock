@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    routes_page (0.1.0)
+    routes_page (0.1.1)
       rails (~> 5.1.4)
 
 GEM
@@ -67,7 +67,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
-    erubi (1.7.0)
+    erubi (1.7.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     grape (1.0.1)
@@ -80,7 +80,7 @@ GEM
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    loofah (2.1.1)
+    loofah (2.2.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -92,7 +92,7 @@ GEM
     mustermann (1.0.1)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
-    nio4r (2.1.0)
+    nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     public_suffix (3.0.1)
@@ -159,4 +159,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
