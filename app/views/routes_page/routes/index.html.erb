@@ -1,0 +1,81 @@
+<h3>
+  List of Routes
+</h3>
+
+<div class="routes">
+  <div class="routes-title rails-route">
+    Rails routes
+  </div>
+  <table class="routes-table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>verb</th>
+        <th>path</th>
+        <th>controller#actin</th>
+      </tr>
+    </thead>
+    <tobdy>
+      <% @routes[:rails_routes].each do |route| %>
+        <tr class="route">
+          <td>
+            <% if route[:name].present? %>
+              <%= route[:name] %>_path
+            <% end %>
+          </td>
+          <td>
+            <%= route[:verb] %>
+          </td>
+          <td>
+            <%= route[:path] %>
+          </td>
+          <td>
+            <%= route[:reqs] %>
+          </td>
+        </tr>
+      <% end %>
+    </tobdy>
+  </table>
+</div>
+
+<br>
+<% if @routes[:grape_routes].any? %>
+  <div class="routes">
+    <div class="routes-title rails-route">
+      Grape routes
+    </div>
+    <table class="routes-table">
+      <thead>
+        <tr>
+          <th>namespace</th>
+          <th>version</th>
+          <th>verb</th>
+          <th>path</th>
+          <th>params</th>
+        </tr>
+      </thead>
+      <tobdy>
+        <% @routes[:grape_routes].each do |route| %>
+          <tr class="route">
+            <td>
+              <%= route[:namespace] %>
+            </td>
+            <td>
+              <%= route[:version] %>
+            </td>
+            <td>
+              <%= route[:verb] %>
+            </td>
+            <td>
+              <%= route[:path] %>
+            </td>
+            <td>
+              <%= route[:params] %>
+            </td>
+          </tr>
+        <% end %>
+      </tobdy>
+    </table>
+  </div>
+
+<% end %>

@@ -1,0 +1,33 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+h3{
+  text-align: center;
+}
+
+.routes-title{
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.routes-table{
+  border-spacing: 0;
+  width: 100%;
+  line-height: 25px;
+  text-align: left;
+}
+
+.routes-table thead th{
+  border-bottom: 3px solid #e1e1e1;
+}
+
+.routes-table tbody tr:nth-child(even) {
+  background: #DDD
+}
+
+.routes-table tbody tr:nth-child(odd) {
+  background: #FFF
+}
