@@ -1,24 +1,21 @@
 # RoutesPage
-Short description and motivation.
+RoutesPage is used for displaying rails routes and grape routes in a web page for your Rails application.
 
 ## Usage
-How to use my plugin.
+By Default, you can get your info table of routes on http://localhost:3000/rails/routes_page since you install this gem in your Rails appliation.
 
 ## Installation
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
-gem 'routes_page'
+group :development
+  gem 'routes_page'
+end
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install routes_page
 ```
 
 ## Contributing
